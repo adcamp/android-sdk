@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+     
+     <!-- Идентификатор вашего приложения в системе -->
+     <app_id>a644dfde-491f-4d72-ab0a-88e8b7599ec6</app_id>
+     <!-- Секретный ключ вашего приложения в системе -->
+     <app_secret>fc099a61-337e-4284-be49-ab566c55f6fb</app_secret>
+     <!-- Опции логирования работы библиотеки -->
+     <logging>
+         <enabled>true</enabled>
+         <level>verbose</level>
+     </logging>
+
+ </root>

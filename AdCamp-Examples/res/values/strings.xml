@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">AdCamp Примеры</string>
+    
+    <string name="activity_title_examples">AdCamp Примеры</string>
+    
+    <string name="category_title_banner_regular">Баннерная реклама</string>
+    <string name="category_title_banner_intrestitial">Полноэкранные баннеры</string>
+    
+    <string name="example_title_banner_ads">Баннерная реклама</string>
+    <string name="example_desc_banner_ads">В примере отображаются два разных баннера - вверху и внизу экрана</string>
+    <string name="example_title_banner_in_list">Баннер как один из элементов списка</string>
+    <string name="example_desc_banner_in_list">В примере отображается банер внутри списка из разных элементов</string>
+    <string name="example_title_banner_test_ads">Проверка рекламного места</string>
+    <string name="example_desc_banner_test_ads">В данном примере показано несколько разных баннеров, есть возможность добавлять другие placementId (при условии соответствия app_id и app_secret)</string>
+    <string name="example_title_interstitial_ad">Полноэкранный баннер</string>
+    <string name="example_desc_interstitial_ad">В примере показывается полноэкранный баннер</string>
+    <string name="example_title_interstitial_test">Проверка рекламного места</string>
+    <string name="example_desc_interstitial_test">В данном примере показано несколько разных полноэкранных баннеров, есть возможность добавлять другие placementId (при условии соответствия app_id и app_secret)</string>
+    <string name="example_title_add_params">Дополнительные параметры</string>
+    <string name="example_desc_add_params">В примере выполняется запрос на получение рекламы с дополнительными параметрами</string>
+    
+    <string name="load_ad">Загрузить рекламу</string>
+    <string name="show_ad">Показать рекламу</string>
+    
+</resources>
