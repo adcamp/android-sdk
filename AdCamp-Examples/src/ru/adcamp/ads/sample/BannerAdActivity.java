@@ -17,6 +17,7 @@ public class BannerAdActivity extends Activity {
 		setContentView(R.layout.banner_ad_activity);
 		
 		bannerView = (BannerAdView) findViewById(R.id.bannerView);
+		bannerView.setPlacementId(getResources().getString(R.string.placementid_standart));
 		// Простого вызова showAd буде достаточно, чтобы показать рекламу в текущем размере BannerAdView.
 		bannerView.showAd();
 	}

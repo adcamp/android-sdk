@@ -35,7 +35,7 @@ public class InterstitialActivity extends Activity {
 		loadingIndicator.setVisibility(View.VISIBLE);
 		
 		/* Загружаем рекламу используя наш placementId */
-		InterstitialBannerActivity.preload("3", new OnPreloadListener() {
+		InterstitialBannerActivity.preload(getResources().getString(R.string.placementid_fullscreen), new OnPreloadListener() {
 			@Override
 			public void onInterstitialAdReady(Ad ad) {
 				/* Реклама готова и может быть показана в любой момент */
@@ -43,7 +43,7 @@ public class InterstitialActivity extends Activity {
 				loadingIndicator.setVisibility(View.GONE);
 				showAdButton.setVisibility(View.VISIBLE);
 			}
-			
+			  
 			@Override
 			public void onInterstitialAdFailed(ErrorType error, String errorDescription) {
 				/* Не удалось загрузить рекламу - в этом месте вы можете перейти к показу

@@ -9,8 +9,7 @@
     <ru.adcamp.ads.BannerAdView
         android:id="@+id/bannerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        adcamp:placementId="2" />
+        android:layout_height="wrap_content" />
 
     <View
         android:layout_width="match_parent"

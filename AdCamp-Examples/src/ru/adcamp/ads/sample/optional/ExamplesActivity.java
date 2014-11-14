@@ -3,6 +3,7 @@ package ru.adcamp.ads.sample.optional;
 import java.util.ArrayList;
 import java.util.List;
 
+import ru.adcamp.ads.AdsManager;
 import ru.adcamp.ads.sample.BannerAdActivity;
 import ru.adcamp.ads.sample.BannerInListViewActivity;
 import ru.adcamp.ads.sample.InterstitialActivity;
@@ -11,6 +12,7 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,7 +77,7 @@ public class ExamplesActivity extends ListActivity {
 		public ExamplesAdapter() {
 			super(ExamplesActivity.this, 0, createItems());
 		}
-
+ 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			Object item = getItem(position);
@@ -139,6 +141,7 @@ public class ExamplesActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		AdsManager.getInstance().initialize(this, true, Log.VERBOSE);
 		setListAdapter(new ExamplesAdapter());
 		getListView().setOnItemClickListener(new OnItemClickListener() {
 			@Override

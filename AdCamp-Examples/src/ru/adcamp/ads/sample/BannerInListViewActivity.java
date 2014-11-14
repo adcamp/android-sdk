@@ -145,7 +145,7 @@ public class BannerInListViewActivity extends Activity {
 		String[] items = {"one", "two", "three", "four", "five", "six", "seven"};
 		BaseAdapter yourAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 		// Создаем AdCampAdapter вокруг нашего адаптера с контентом
-		adCampAdapter = new AdCampAdapter(this, yourAdapter, "2", 3);
+		adCampAdapter = new AdCampAdapter(this, yourAdapter, getResources().getString(R.string.placementid_standart), 3);
 		// Используем в качестве адаптера AdCampAdapter
 		listView.setAdapter(adCampAdapter);
 		setContentView(listView);
