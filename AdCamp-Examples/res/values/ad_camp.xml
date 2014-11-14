@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="placementid_standart">15</string>
+    <string name="placementid_fullscreen">17</string>
+</resources>
