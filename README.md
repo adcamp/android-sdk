@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -8,7 +9,7 @@
 </head>
 <body><div class="container"><p><div class="toc">
 <ul>
-<li><a href="#top">Руководство по интеграции SDK AdCamp для Android   </a><ul>
+<li><a href="#top">Руководство по интеграции SDK AdCamp для Android</a><ul>
 <li><a href="#подготовка-к-работe">Подготовка к работe</a><ul>
 <li><a href="#требования">Требования</a></li>
 <li><a href="#загрузка">Загрузка</a></li>
@@ -24,12 +25,13 @@
 </ul>
 </li>
 </ul>
+<ul><li><a href="#versions">Изменения по версиям</a><li></ul>
 </div>
 </p>
 
 
 
-<h1 id="top">Руководство по интеграции SDK AdCamp для Android   </h1>
+<h1 id="top">Руководство по интеграции SDK AdCamp для Android</h1>
 
 
 
@@ -57,11 +59,11 @@
 
 <h3 id="загрузка">Загрузка</h3>
 
-<p>Для начала вам необходимо загрузить следующие файлы из текущего репозитория:</p>
+<p>Для начала вам необходимо загрузить следующие файлы:</p>
 
 <ol>
-<li>AdCampSDK для Android </li>
-<li>Проект демонстрационного приложения. <br>
+<li>AdCampSDK для Android по ссылке: <a href="http://tst.adcamp.ru/adcamp/android/adcamp-sdk-latest.jar">http://tst.adcamp.ru/adcamp/android/adcamp-sdk-latest.jar</a></li>
+<li><a href="http://tst.adcamp.ru/adcamp/android/adcamp-examples.zip">Проект демонстрационного приложения.</a> <br>
 Данный пример содержит все варианты использования SDK и его можно использовать как практическое пособие при встраивании sdk в ваше собственное приложение</li>
 </ol>
 
@@ -150,7 +152,7 @@ AdsManager.getInstance().initialize(<span class="hljs-keyword">this</span>, <spa
 bannerView<span class="hljs-preprocessor">.setPlacementId</span>(MY_PLACEMENT_ID)<span class="hljs-comment">;</span>
 rootView<span class="hljs-preprocessor">.addView</span>(bannerView, ViewGroup<span class="hljs-preprocessor">.LayoutParams</span><span class="hljs-preprocessor">.MATCH</span>_PARENT, ViewGroup<span class="hljs-preprocessor">.LayoutParams</span><span class="hljs-preprocessor">.WRAP</span>_CONTENT)<span class="hljs-comment">;</span></code></pre>
 
-<p><b>Идентификатор placementId</b> вы можете получить по запросу на электронную почту account@adcamp.ru в письме необходимо указать название площадки и тип плейсмента.</p>
+<p style=""><b>Идентификатор placementId</b> вы можете получить по запросу на электронную почту account@adcamp.ru в письме необходимо указать название площадки и тип плейсмента.</p>
 
 <p>Баннер будет иметь размер 0х0 до тех пор, пока его содержимое не будет полностью подгружено и отображено.  Поэтому Вам не нужно заботиться о видимости или размере баннера. Также обратите внимание, что если вы используете метод <a href="http://tst.adcamp.ru/adcamp/android/doc/ru/adcamp/ads/BannerAdView.html#showAd%28%29">showAd()</a> без явного указания размер баннера, то загрузка баннера не начнется до определения <a href="http://tst.adcamp.ru/adcamp/android/doc/ru/adcamp/ads/BannerAdView.html">BannerAdView</a> своих размеров.  <br>
 <strong>Т.е. <a href="http://tst.adcamp.ru/adcamp/android/doc/ru/adcamp/ads/BannerAdView.html">BannerAdView</a> не начнет загрузку, пока он или его контейнер имеют видимость GONE.</strong> </p></li>
@@ -175,6 +177,12 @@ rootView<span class="hljs-preprocessor">.addView</span>(bannerView, ViewGroup<sp
     <span class="hljs-keyword">super</span>.onDestroy();
     bannerView.onDestroy();
 }</code></pre></li>
+<li><p>(Опционально)  Вы можете вызвать дополнительное конверсионное событие в нужный момент, вызвав метод <a href="http://tst.adcamp.ru/adcamp/android/doc/ru/adcamp/ads/BannerAdView.html#trackUserEvent-ru.adcamp.ads.BannerAdView.UserEvent-">bannerView.trackUserEvent(UserEvent)</a>:</p>
+
+<pre class="prettyprint"><code class="language-{.java} hljs avrasm">
+bannerView<span class="hljs-preprocessor">.trackUserEvent</span>(UserEvent<span class="hljs-preprocessor">.USER</span>_EVENT_1)<span class="hljs-comment">;</span></code></pre>
+
+<p>Конкретный смысл каждого типа пользовательского события задается определяется самим разработчиком и задается на этапе создания рекламной кампании.</p></li>
 </ol>
 
 
@@ -369,5 +377,11 @@ InterstitialBannerActivity.preload(MY_PLACEMENT_ID, <span class="hljs-keyword">n
 
 
 
-<pre class="prettyprint"><code class="language-{.java} hljs sql">InterstitialBannerActivity.<span class="hljs-operator"><span class="hljs-keyword">show</span>(this, prepairedAd);</span></code></pre></div></body>
+<pre class="prettyprint"><code class="language-{.java} hljs sql">InterstitialBannerActivity.<span class="hljs-operator"><span class="hljs-keyword">show</span>(this, prepairedAd);</span></code></pre>
+
+
+<h1 id="versions">Изменения по версиям</h1>
+<h3>ADCampSDK v2.8</h3>
+<p>- добавлены дополнительные конверсионные события</p>
+</div></body>
 </html>
